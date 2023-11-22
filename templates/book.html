@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus-Ticket Booking</title>
+    <style>
+        table {
+            border: 8px outset;
+            border-radius: 10px;
+            border-spacing: 10px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: burlywood;
+        }
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin:80px">
+        <h1 align="center">Bus Booking Form</h1>
+        <hr>
+        <h3 align="center">Book your ticket Here</h3>
+        <hr>
+        <br>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <br><br>
+            <div style="text-align:center">
+                <input type="submit" />
+            </div>
+        </form>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    </div>
+</body>
+
+</html>
